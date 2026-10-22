@@ -5,6 +5,7 @@
   --panel-strong: #7ca2e0;
   --text: #6c2c25;
   --muted: rgba(108, 44, 37, 0.78);
+  --heading-color: #b94027;
   --accent: #7ca2e0;
   --accent-strong: #6c2c25;
   --accent-warm: #6c2c25;
@@ -27,6 +28,7 @@
   --panel-strong: #cac444;
   --text: #feffdb;
   --muted: rgba(254, 255, 219, 0.82);
+  --heading-color: #cac444;
   --accent: #cac444;
   --accent-strong: #cac444;
   --accent-warm: #cac444;
@@ -62,7 +64,7 @@ body {
 }
 
 a {
-  color: inherit;
+  color: var(--accent);
   text-decoration: none;
 }
 
@@ -73,6 +75,7 @@ p {
 
 h1, h2, h3, h4 {
   margin: 0 0 1rem;
+  color: var(--heading-color);
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.04em;
@@ -256,7 +259,7 @@ h3 {
 
 .card-title {
   margin-bottom: 0.8rem;
-  color: var(--accent-warm);
+  color: var(--heading-color);
   text-transform: lowercase;
   letter-spacing: 0.12em;
   font-size: 0.72rem;
@@ -362,13 +365,15 @@ h3 {
 
 .article-body h2,
 .article-body h3 {
-  color: var(--text);
+  color: var(--heading-color);
   margin-top: 2rem;
 }
 
 .article-body img {
+  display: block;
   max-width: 100%;
   height: auto;
+  margin-inline: auto;
   cursor: zoom-in;
 }
 
