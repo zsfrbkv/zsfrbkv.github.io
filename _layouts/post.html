@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<article class="article-page">
+  <div class="container narrow article">
+    <header class="article-header">
+      <p class="eyebrow">{{ page.category }} · {{ page.date | date: "%B %Y" }}</p>
+      <h1>{{ page.title | escape }}</h1>
+      <p class="article-description">{{ page.description | escape }}</p>
+    </header>
+    <div class="article-body">
+      {{ content }}
+    </div>
+  </div>
+</article>

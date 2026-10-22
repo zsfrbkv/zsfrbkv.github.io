@@ -1,0 +1,5 @@
+<article class="post-card">
+  <div class="post-meta"><span>{{ include.post.date | date: "%Y" }}</span> <span>{{ include.post.category }}</span></div>
+  <h3><a href="{{ include.post.url | relative_url }}">{{ include.post.title | escape }}</a></h3>
+  <p>{{ include.post.description | escape }}</p>
+</article>

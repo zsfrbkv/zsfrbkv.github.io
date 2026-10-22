@@ -1,0 +1,13 @@
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="{{ '/index.html' | relative_url }}"{% if page.nav == "home" %} class="active"{% endif %}>home</a>
+      <a href="{{ '/blog.html' | relative_url }}"{% if page.nav == "blog" %} class="active"{% endif %}>blog</a>
+      <a href="{{ '/cv.html' | relative_url }}"{% if page.nav == "cv" %} class="active"{% endif %}>cv</a>
+    </nav>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to night mode" aria-pressed="false">
+      night mode
+    </button>
+  </div>
+</header>

@@ -1,0 +1,21 @@
+title: cool mit kitsch
+description: Zaira's personal site with notes, writing, projects, and CV.
+url: https://zsfrbkv.github.io
+markdown: kramdown
+
+collections:
+  articles:
+    output: true
+    permalink: /blog/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: default
+  - scope:
+      path: "_articles"
+      type: articles
+    values:
+      layout: post

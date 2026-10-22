@@ -1,15 +1,43 @@
 :root {
-  --bg: #0b1020;
-  --bg-soft: #111827;
-  --panel: #101a2b;
-  --panel-strong: #0d1424;
-  --text: #e5edf7;
-  --muted: #9aa8bd;
-  --accent: #7dd3fc;
-  --accent-strong: #5eead4;
-  --accent-warm: #fbbf24;
-  --line: rgba(148, 163, 184, 0.18);
-  --shadow: rgba(2, 6, 23, 0.45);
+  --bg: #feffdb;
+  --bg-soft: rgba(202, 196, 68, 0.12);
+  --panel: rgba(202, 196, 68, 0.1);
+  --panel-strong: #cac444;
+  --text: #4d53ae;
+  --muted: rgba(77, 83, 174, 0.78);
+  --accent: #cac444;
+  --accent-strong: #4d53ae;
+  --accent-warm: #cac444;
+  --line: rgba(77, 83, 174, 0.22);
+  --shadow: rgba(77, 83, 174, 0.14);
+  --page-glow-one: rgba(202, 196, 68, 0.12);
+  --page-glow-two: rgba(77, 83, 174, 0.08);
+  --header-bg: rgba(254, 255, 219, 0.88);
+  --surface: rgba(254, 255, 219, 0.86);
+  --hover-border: rgba(202, 196, 68, 0.85);
+  --primary-button-bg: #cac444;
+  --primary-button-text: #4d53ae;
+}
+
+:root[data-theme="night"] {
+  --bg: #4d53ae;
+  --bg-soft: rgba(202, 196, 68, 0.12);
+  --panel: rgba(202, 196, 68, 0.1);
+  --panel-strong: #cac444;
+  --text: #feffdb;
+  --muted: rgba(254, 255, 219, 0.82);
+  --accent: #cac444;
+  --accent-strong: #cac444;
+  --accent-warm: #cac444;
+  --line: rgba(202, 196, 68, 0.24);
+  --shadow: rgba(20, 22, 76, 0.28);
+  --page-glow-one: rgba(202, 196, 68, 0.1);
+  --page-glow-two: rgba(20, 22, 76, 0.16);
+  --header-bg: rgba(77, 83, 174, 0.9);
+  --surface: rgba(61, 67, 151, 0.88);
+  --hover-border: rgba(202, 196, 68, 0.85);
+  --primary-button-bg: #cac444;
+  --primary-button-text: #4d53ae;
 }
 
 * {
@@ -23,8 +51,8 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at top left, rgba(125, 211, 252, 0.1), transparent 30%),
-    radial-gradient(circle at bottom right, rgba(94, 234, 212, 0.14), transparent 35%),
+    radial-gradient(circle at top left, var(--page-glow-one), transparent 30%),
+    radial-gradient(circle at bottom right, var(--page-glow-two), transparent 35%),
     var(--bg);
   color: var(--text);
   font-family: "JetBrains Mono", monospace;
@@ -75,7 +103,7 @@ h3 {
   top: 0;
   z-index: 20;
   backdrop-filter: blur(10px);
-  background: rgba(11, 16, 32, 0.82);
+  background: var(--header-bg);
   border-bottom: 1px solid var(--line);
 }
 
@@ -111,6 +139,28 @@ h3 {
 .main-nav a:hover,
 .main-nav a.active {
   color: var(--text);
+}
+
+.theme-toggle {
+  padding: 0.55rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.75rem;
+  text-transform: lowercase;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--hover-border);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
 
 .section {
@@ -177,13 +227,13 @@ h3 {
 
 .button:hover {
   transform: translateY(-1px);
-  border-color: rgba(125, 211, 252, 0.5);
+  border-color: var(--hover-border);
 }
 
 .button.primary {
-  background: var(--accent);
+  background: var(--primary-button-bg);
   border-color: var(--accent);
-  color: #041320;
+  color: var(--primary-button-text);
   font-weight: 700;
 }
 
@@ -193,7 +243,7 @@ h3 {
 .contact-box,
 .cv-paper,
 .info-panel {
-  background: rgba(16, 26, 43, 0.9);
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 18px;
   box-shadow: 0 18px 45px var(--shadow);
@@ -227,7 +277,7 @@ h3 {
 }
 
 .muted-section {
-  background: rgba(15, 23, 42, 0.55);
+  background: var(--bg-soft);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
@@ -257,7 +307,7 @@ h3 {
 
 .post-card:hover {
   transform: translateY(-2px);
-  border-color: rgba(125, 211, 252, 0.5);
+  border-color: var(--hover-border);
 }
 
 .post-meta {
@@ -274,6 +324,38 @@ h3 {
 
 .post-card p {
   font-size: 0.87rem;
+}
+
+.article-page {
+  padding: 4.5rem 0;
+}
+
+.article-header {
+  margin-bottom: 2rem;
+}
+
+.article-header h1 {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+}
+
+.article-description {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.article-body {
+  color: var(--muted);
+}
+
+.article-body p {
+  color: inherit;
+  margin-bottom: 1.3rem;
+}
+
+.article-body h2,
+.article-body h3 {
+  color: var(--text);
+  margin-top: 2rem;
 }
 
 .about-grid {

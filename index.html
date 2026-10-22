@@ -1,137 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zaira | Notes & Code</title>
-    <meta
-      name="description"
-      content="Zaira's personal site with notes, writing, projects, and CV."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container nav">
-        <a class="brand" href="index.html">zaira</a>
-        <nav class="main-nav" aria-label="Main navigation">
-          <a href="index.html" class="active">home</a>
-          <a href="blog.html">blog</a>
-          <a href="publications.html">writing</a>
-          <a href="cv.html">cv</a>
-          <a href="contact.html">contact</a>
-        </nav>
+---
+layout: default
+title: Zaira | Notes & Code
+description: zaira's personal site with notes, writing, projects, and CV.
+nav: home
+---
+<section class="section">
+  <div class="container about-grid">
+    <div>
+      <div class="section-heading left">
+        <p class="eyebrow">// hello</p>
+        <h2>about me</h2>
       </div>
-    </header>
+      <p class="body-copy">
+        i am a computational biologist who enjoys visual presentation of complex messages.
+        my work is usually a mix of code, design, and experimentation.
+      </p>
+    </div>
 
-    <main>
-      <section class="hero section">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">// hello</p>
-            <h1>I write code, keep notes, and build things I’d actually use.</h1>
-            <p class="lede">
-              I’m Zaira. I work at the intersection of software, systems, and curious problem-solving.
-              This site is where I keep notes, links, little experiments, and the occasional longer thought.
-            </p>
-            <div class="hero-actions">
-              <a class="button primary" href="blog.html">read notes</a>
-              <a class="button secondary" href="cv.html">view cv</a>
-            </div>
-          </div>
-
-          <aside class="info-card">
-            <div class="card-title">status</div>
-            <p class="status-line">currently learning, building, and writing in public.</p>
-            <ul class="mini-list">
-              <li>software engineering</li>
-              <li>systems + tooling</li>
-              <li>data, design, and product thinking</li>
-            </ul>
-          </aside>
-        </div>
-      </section>
-
-      <section class="section muted-section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">// recent</p>
-            <h2>latest notes</h2>
-          </div>
-
-          <div class="card-grid three-up">
-            <article class="post-card">
-              <div class="post-meta"><span>2026</span> <span>essay</span></div>
-              <h3><a href="post.html">what I learned from building a small tool in public</a></h3>
-              <p>Notes on shipping iteratively, documenting tradeoffs, and making rough work visible.</p>
-            </article>
-
-            <article class="post-card">
-              <div class="post-meta"><span>2026</span> <span>note</span></div>
-              <h3><a href="post.html">tiny interfaces, better focus</a></h3>
-              <p>A short reflection on how smaller systems often create less friction and more clarity.</p>
-            </article>
-
-            <article class="post-card">
-              <div class="post-meta"><span>2025</span> <span>project</span></div>
-              <h3><a href="post.html">building drafts for the strange parts of coding</a></h3>
-              <p>On prototypes, tooling, and the value of keeping working notes while the problem is still alive.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container about-grid">
-          <div>
-            <div class="section-heading left">
-              <p class="eyebrow">// about</p>
-              <h2>short intro</h2>
-            </div>
-            <p class="body-copy">
-              I’m a software engineer who enjoys thinking about systems, interfaces, and how useful tools are made.
-              I like reading, writing, building prototypes, and trying to understand how things fit together.
-            </p>
-            <p class="body-copy">
-              My work is usually a mix of code, design, and experimentation. I’m especially interested in the parts of technology that feel useful, honest, and human.
-            </p>
-          </div>
-
-          <div class="info-panel">
-            <div class="info-row">
-              <span class="label">based</span>
-              <span>remote / europe</span>
-            </div>
-            <div class="info-row">
-              <span class="label">interests</span>
-              <span>web, tooling, research, UX</span>
-            </div>
-            <div class="info-row">
-              <span class="label">currently</span>
-              <span>building, learning, writing</span>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-row">
-        <p>© <span id="year"></span> Zaira</p>
-        <div class="footer-links">
-          <a href="https://github.com/zsfrbkv" target="_blank" rel="noreferrer">github</a>
-          <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">linkedin</a>
-          <a href="mailto:hello@example.com">email</a>
-        </div>
+    <div class="info-panel">
+      <div class="info-row">
+        <span class="label">based</span>
+        <span>remote / germany</span>
       </div>
-    </footer>
+      <div class="info-row">
+        <span class="label">interests</span>
+        <span>biology, visuals, self-management</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script src="script.js"></script>
-  </body>
-</html>
+<section class="section muted-section">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">// recent</p>
+      <h2>latest notes</h2>
+    </div>
+
+    <div class="card-grid three-up">
+      {% assign recent_entries = site.articles | sort: "date" | reverse %}
+      {% for entry in recent_entries limit:3 %}
+        {% include post-card.html post=entry %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
