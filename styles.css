@@ -366,6 +366,53 @@ h3 {
   margin-top: 2rem;
 }
 
+.article-body img {
+  max-width: 100%;
+  height: auto;
+  cursor: zoom-in;
+}
+
+.image-lightbox {
+  position: fixed;
+  max-width: min(96vw, 1200px);
+  max-height: 94vh;
+  padding: 3rem 1rem 1rem;
+  overflow: visible;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--bg);
+  color: var(--text);
+  box-shadow: 0 18px 60px var(--shadow);
+}
+
+.image-lightbox::backdrop {
+  background: rgba(20, 20, 30, 0.82);
+  backdrop-filter: blur(4px);
+}
+
+.image-lightbox img {
+  display: block;
+  max-width: calc(96vw - 2rem);
+  max-height: calc(94vh - 4rem);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.image-lightbox-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;

@@ -27,4 +27,45 @@ document.addEventListener("DOMContentLoaded", () => {
   if (yearNode) {
     yearNode.textContent = new Date().getFullYear();
   }
+
+  const articleBody = document.querySelector(".article-body");
+  if (articleBody) {
+    const lightbox = document.createElement("dialog");
+    lightbox.className = "image-lightbox";
+
+    const closeButton = document.createElement("button");
+    closeButton.className = "image-lightbox-close";
+    closeButton.type = "button";
+    closeButton.textContent = "close";
+    closeButton.setAttribute("aria-label", "Close enlarged image");
+
+    const enlargedImage = document.createElement("img");
+    enlargedImage.alt = "";
+
+    lightbox.append(closeButton, enlargedImage);
+    document.body.append(lightbox);
+
+    closeButton.addEventListener("click", () => lightbox.close());
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) {
+        lightbox.close();
+      }
+    });
+
+    articleBody.addEventListener("click", (event) => {
+      if (!(event.target instanceof Element)) {
+        return;
+      }
+
+      const image = event.target.closest("img");
+      if (!image || !articleBody.contains(image)) {
+        return;
+      }
+
+      event.preventDefault();
+      enlargedImage.src = image.currentSrc || image.src;
+      enlargedImage.alt = image.alt;
+      lightbox.showModal();
+    });
+  }
 });

@@ -25,3 +25,9 @@ GitHub:
 The post URL is generated as `/blog/your-file-name/`. The blog and home page
 lists update automatically from the files in `_articles`, sorted by the post
 date.
+
+## Local drafts
+
+Keep unpublished writing in the local `_drafts` folder. It is ignored by Git,
+so draft files are not committed, pushed, or published. When a post is ready,
+move it into `_articles` and follow the publishing steps above.
