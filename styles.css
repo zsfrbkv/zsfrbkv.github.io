@@ -1,22 +1,23 @@
 :root {
-  --bg: #feffdb;
-  --bg-soft: rgba(202, 196, 68, 0.12);
-  --panel: rgba(202, 196, 68, 0.1);
-  --panel-strong: #cac444;
-  --text: #4d53ae;
-  --muted: rgba(77, 83, 174, 0.78);
-  --accent: #cac444;
-  --accent-strong: #4d53ae;
-  --accent-warm: #cac444;
-  --line: rgba(77, 83, 174, 0.22);
-  --shadow: rgba(77, 83, 174, 0.14);
-  --page-glow-one: rgba(202, 196, 68, 0.12);
-  --page-glow-two: rgba(77, 83, 174, 0.08);
-  --header-bg: rgba(254, 255, 219, 0.88);
-  --surface: rgba(254, 255, 219, 0.86);
-  --hover-border: rgba(202, 196, 68, 0.85);
-  --primary-button-bg: #cac444;
-  --primary-button-text: #4d53ae;
+  --bg: #f2eddb;
+  --bg-soft: rgba(124, 162, 224, 0.12);
+  --panel: rgba(124, 162, 224, 0.08);
+  --panel-strong: #7ca2e0;
+  --text: #6c2c25;
+  --muted: rgba(108, 44, 37, 0.78);
+  --accent: #7ca2e0;
+  --accent-strong: #6c2c25;
+  --accent-warm: #6c2c25;
+  --accent-alt: #6c2c25;
+  --line: rgba(108, 44, 37, 0.2);
+  --shadow: rgba(108, 44, 37, 0.12);
+  --page-glow-one: rgba(124, 162, 224, 0.18);
+  --page-glow-two: rgba(235, 94, 58, 0.08);
+  --header-bg: rgba(242, 237, 219, 0.9);
+  --surface: rgba(255, 253, 245, 0.78);
+  --hover-border: #eb5e3a;
+  --primary-button-bg: #6c2c25;
+  --primary-button-text: #f2eddb;
 }
 
 :root[data-theme="night"] {
@@ -29,6 +30,7 @@
   --accent: #cac444;
   --accent-strong: #cac444;
   --accent-warm: #cac444;
+  --accent-alt: #cac444;
   --line: rgba(202, 196, 68, 0.24);
   --shadow: rgba(20, 22, 76, 0.28);
   --page-glow-one: rgba(202, 196, 68, 0.1);
@@ -119,7 +121,7 @@ h3 {
   font-size: 1.5rem;
   font-weight: 800;
   letter-spacing: -0.08em;
-  color: var(--accent);
+  color: var(--accent-alt);
 }
 
 .main-nav {
@@ -159,7 +161,7 @@ h3 {
 }
 
 .theme-toggle:focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--accent-alt);
   outline-offset: 3px;
 }
 
@@ -180,7 +182,6 @@ h3 {
 
 .eyebrow,
 .label,
-.cv-label,
 .post-meta {
   text-transform: lowercase;
   letter-spacing: 0.12em;
@@ -232,7 +233,7 @@ h3 {
 
 .button.primary {
   background: var(--primary-button-bg);
-  border-color: var(--accent);
+  border-color: var(--primary-button-bg);
   color: var(--primary-button-text);
   font-weight: 700;
 }
@@ -256,6 +257,13 @@ h3 {
 .card-title {
   margin-bottom: 0.8rem;
   color: var(--accent-warm);
+  text-transform: lowercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+}
+
+.cv-label {
+  color: var(--accent-alt);
   text-transform: lowercase;
   letter-spacing: 0.12em;
   font-size: 0.72rem;
@@ -402,7 +410,7 @@ h3 {
 }
 
 .pub-year {
-  color: var(--accent);
+  color: var(--accent-alt);
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -417,7 +425,7 @@ h3 {
 
 .pub-meta {
   margin-bottom: 0.55rem;
-  color: var(--accent-strong);
+  color: var(--accent-alt);
   text-transform: lowercase;
   letter-spacing: 0.12em;
   font-size: 0.7rem;
@@ -470,6 +478,10 @@ h3 {
   color: var(--muted);
 }
 
+.cv-list li + li {
+  margin-top: 0.9rem;
+}
+
 .cv-skills {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -484,6 +496,12 @@ h3 {
 
 .cv-skills p {
   margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.cv-organization {
+  margin: -0.55rem 0 0.35rem;
   color: var(--muted);
   font-size: 0.82rem;
 }
