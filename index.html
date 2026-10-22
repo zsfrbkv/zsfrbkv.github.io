@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alex Morgan | Personal Site</title>
+    <title>Zaira | Notes & Code</title>
     <meta
       name="description"
-      content="Personal website and blog for Alex Morgan, including writing, research, and selected publications."
+      content="Zaira's personal site with notes, writing, projects, and CV."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -19,122 +19,103 @@
   <body>
     <header class="site-header">
       <div class="container nav">
-        <a class="brand" href="index.html">Alex Morgan</a>
+        <a class="brand" href="index.html">zaira</a>
         <nav class="main-nav" aria-label="Main navigation">
-          <a href="index.html" class="active">Home</a>
-          <a href="publications.html">Publications</a>
-          <a href="blog.html">Blog</a>
-          <a href="contact.html">Contact</a>
+          <a href="index.html" class="active">home</a>
+          <a href="blog.html">blog</a>
+          <a href="publications.html">writing</a>
+          <a href="cv.html">cv</a>
+          <a href="contact.html">contact</a>
         </nav>
       </div>
     </header>
 
     <main>
-      <section class="hero">
+      <section class="hero section">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">Researcher • Writer • Technologist</p>
-            <h1>I explore ideas at the edge of systems, culture, and design.</h1>
+            <p class="eyebrow">// hello</p>
+            <h1>I write code, keep notes, and build things I’d actually use.</h1>
             <p class="lede">
-              I’m Alex Morgan, a writer and researcher working on digital tools,
-              social systems, and thoughtful public scholarship. This site gathers
-              my essays, research, selected publications, and occasional notes from
-              the field.
+              I’m Zaira. I work at the intersection of software, systems, and curious problem-solving.
+              This site is where I keep notes, links, little experiments, and the occasional longer thought.
             </p>
             <div class="hero-actions">
-              <a class="button primary" href="blog.html">Read my writing</a>
-              <a class="button secondary" href="publications.html">See publications</a>
+              <a class="button primary" href="blog.html">read notes</a>
+              <a class="button secondary" href="cv.html">view cv</a>
             </div>
           </div>
 
-          <aside class="profile-card">
-            <div class="profile-photo">
-              <div class="photo-fallback">AM</div>
-            </div>
-            <div class="profile-meta">
-              <p class="meta-label">Currently</p>
-              <p>Independent researcher and writer</p>
-              <p class="meta-label">Based in</p>
-              <p>Boston, MA</p>
-            </div>
+          <aside class="info-card">
+            <div class="card-title">status</div>
+            <p class="status-line">currently learning, building, and writing in public.</p>
+            <ul class="mini-list">
+              <li>software engineering</li>
+              <li>systems + tooling</li>
+              <li>data, design, and product thinking</li>
+            </ul>
           </aside>
         </div>
       </section>
 
-      <section class="section">
+      <section class="section muted-section">
         <div class="container">
-          <div class="section-header">
-            <p class="eyebrow">About</p>
-            <h2>Working across research, code, and narrative.</h2>
-          </div>
-
-          <div class="about-grid">
-            <div class="text-block">
-              <p>
-                My work sits at the intersection of digital culture, science and
-                society, and human-centered technology. I write about how systems
-                form our habits, how institutions shape opportunity, and how we can
-                build more humane tools.
-              </p>
-              <p>
-                I’ve worked in public-interest technology, research labs, and
-                editorial environments, and I continue to write on the relationship
-                between technical systems and everyday life.
-              </p>
-            </div>
-
-            <div class="mini-grid">
-              <div class="mini-card">
-                <span class="mini-label">Focus</span>
-                <strong>Public-interest tech</strong>
-              </div>
-              <div class="mini-card">
-                <span class="mini-label">Method</span>
-                <strong>Research + writing</strong>
-              </div>
-              <div class="mini-card">
-                <span class="mini-label">Interests</span>
-                <strong>Design, policy, culture</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section muted">
-        <div class="container">
-          <div class="section-header">
-            <p class="eyebrow">Recent work</p>
-            <h2>Selected notes and essays.</h2>
+          <div class="section-heading">
+            <p class="eyebrow">// recent</p>
+            <h2>latest notes</h2>
           </div>
 
           <div class="card-grid three-up">
             <article class="post-card">
-              <p class="post-meta">Essay • March 2026</p>
-              <h3><a href="post.html">Designing for attention in a noisy world</a></h3>
-              <p>
-                A reflection on how interfaces shape our attention and what that
-                means for civic life.
-              </p>
+              <div class="post-meta"><span>2026</span> <span>essay</span></div>
+              <h3><a href="post.html">what I learned from building a small tool in public</a></h3>
+              <p>Notes on shipping iteratively, documenting tradeoffs, and making rough work visible.</p>
             </article>
 
             <article class="post-card">
-              <p class="post-meta">Field notes • January 2026</p>
-              <h3><a href="post.html">On slow tools and the value of friction</a></h3>
-              <p>
-                Why some of the most humane products are the ones that resist speed
-                and optimize for care.
-              </p>
+              <div class="post-meta"><span>2026</span> <span>note</span></div>
+              <h3><a href="post.html">tiny interfaces, better focus</a></h3>
+              <p>A short reflection on how smaller systems often create less friction and more clarity.</p>
             </article>
 
             <article class="post-card">
-              <p class="post-meta">Research • November 2025</p>
-              <h3><a href="post.html">What public trust looks like in digital systems</a></h3>
-              <p>
-                A short essay on institutions, transparency, and the infrastructures
-                behind trust.
-              </p>
+              <div class="post-meta"><span>2025</span> <span>project</span></div>
+              <h3><a href="post.html">building drafts for the strange parts of coding</a></h3>
+              <p>On prototypes, tooling, and the value of keeping working notes while the problem is still alive.</p>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container about-grid">
+          <div>
+            <div class="section-heading left">
+              <p class="eyebrow">// about</p>
+              <h2>short intro</h2>
+            </div>
+            <p class="body-copy">
+              I’m a software engineer who enjoys thinking about systems, interfaces, and how useful tools are made.
+              I like reading, writing, building prototypes, and trying to understand how things fit together.
+            </p>
+            <p class="body-copy">
+              My work is usually a mix of code, design, and experimentation. I’m especially interested in the parts of technology that feel useful, honest, and human.
+            </p>
+          </div>
+
+          <div class="info-panel">
+            <div class="info-row">
+              <span class="label">based</span>
+              <span>remote / europe</span>
+            </div>
+            <div class="info-row">
+              <span class="label">interests</span>
+              <span>web, tooling, research, UX</span>
+            </div>
+            <div class="info-row">
+              <span class="label">currently</span>
+              <span>building, learning, writing</span>
+            </div>
           </div>
         </div>
       </section>
@@ -142,11 +123,11 @@
 
     <footer class="site-footer">
       <div class="container footer-row">
-        <p>© <span id="year"></span> Alex Morgan</p>
+        <p>© <span id="year"></span> Zaira</p>
         <div class="footer-links">
-          <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="mailto:alex@example.com">Email</a>
+          <a href="https://github.com/zsfrbkv" target="_blank" rel="noreferrer">github</a>
+          <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">linkedin</a>
+          <a href="mailto:hello@example.com">email</a>
         </div>
       </div>
     </footer>
