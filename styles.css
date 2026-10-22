@@ -5,11 +5,10 @@
   --panel-strong: #7ca2e0;
   --text: #6c2c25;
   --muted: rgba(108, 44, 37, 0.78);
-  --heading-color: #b94027;
-  --accent: #7ca2e0;
-  --accent-strong: #6c2c25;
-  --accent-warm: #6c2c25;
-  --accent-alt: #6c2c25;
+  --accent: #eb5e3a;
+  --accent-strong: #eb5e3a;
+  --accent-warm: #eb5e3a;
+  --accent-alt: #eb5e3a;
   --line: rgba(108, 44, 37, 0.2);
   --shadow: rgba(108, 44, 37, 0.12);
   --page-glow-one: rgba(124, 162, 224, 0.18);
@@ -28,7 +27,6 @@
   --panel-strong: #cac444;
   --text: #feffdb;
   --muted: rgba(254, 255, 219, 0.82);
-  --heading-color: #cac444;
   --accent: #cac444;
   --accent-strong: #cac444;
   --accent-warm: #cac444;
@@ -75,7 +73,7 @@ p {
 
 h1, h2, h3, h4 {
   margin: 0 0 1rem;
-  color: var(--heading-color);
+  color: var(--text);
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.04em;
@@ -110,6 +108,7 @@ h3 {
   backdrop-filter: blur(10px);
   background: var(--header-bg);
   border-bottom: 1px solid var(--line);
+  color: var(--accent);
 }
 
 .nav {
@@ -133,7 +132,7 @@ h3 {
   align-items: center;
   flex-wrap: wrap;
   font-size: 0.8rem;
-  color: var(--muted);
+  color: var(--accent);
   text-transform: lowercase;
 }
 
@@ -143,7 +142,7 @@ h3 {
 
 .main-nav a:hover,
 .main-nav a.active {
-  color: var(--text);
+  color: var(--accent);
 }
 
 .theme-toggle {
@@ -151,7 +150,7 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 999px;
   background: transparent;
-  color: var(--text);
+  color: var(--accent);
   font: inherit;
   font-size: 0.75rem;
   text-transform: lowercase;
@@ -259,7 +258,7 @@ h3 {
 
 .card-title {
   margin-bottom: 0.8rem;
-  color: var(--heading-color);
+  color: var(--accent-warm);
   text-transform: lowercase;
   letter-spacing: 0.12em;
   font-size: 0.72rem;
@@ -355,7 +354,7 @@ h3 {
 }
 
 .article-body {
-  color: var(--muted);
+  color: var(--text);
 }
 
 .article-body p {
@@ -365,7 +364,7 @@ h3 {
 
 .article-body h2,
 .article-body h3 {
-  color: var(--heading-color);
+  color: var(--text);
   margin-top: 2rem;
 }
 
@@ -584,6 +583,11 @@ h3 {
 .site-footer {
   padding: 1.5rem 0 2rem;
   border-top: 1px solid var(--line);
+  color: var(--accent);
+}
+
+.site-footer p {
+  color: var(--accent);
 }
 
 .footer-row {
@@ -598,7 +602,7 @@ h3 {
   display: flex;
   gap: 1rem;
   font-size: 0.78rem;
-  color: var(--muted);
+  color: var(--accent);
   text-transform: lowercase;
 }
 
