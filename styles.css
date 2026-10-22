@@ -470,6 +470,24 @@ h3 {
   color: var(--muted);
 }
 
+.cv-skills {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem 1.5rem;
+}
+
+.cv-skills h3 {
+  margin: 0 0 0.35rem;
+  font-size: 0.9rem;
+  letter-spacing: 0;
+}
+
+.cv-skills p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
 .contact-box {
   padding: 1.5rem;
 }
@@ -524,6 +542,10 @@ h3 {
 
   .publication-item,
   .cv-item {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-skills {
     grid-template-columns: 1fr;
   }
 }
